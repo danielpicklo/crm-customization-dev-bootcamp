@@ -20,6 +20,8 @@ import {
   TableRow,
   Text,
   ToggleGroup,
+  Modal,
+  ModalBody,
   hubspot
 } from "@hubspot/ui-extensions";
 import _ from 'lodash';
@@ -33,7 +35,7 @@ import {
 } from '@hubspot/ui-extensions/crm';
 
 
-const ITEMS_PER_PAGE = 10;
+const ITEMS_PER_PAGE = 15;
 
 // Define the extension to be run within the Hubspot CRM
 hubspot.extend(({ context, runServerlessFunction, actions }) => (
@@ -148,7 +150,7 @@ const Extension = ({ context, runServerless, sendAlert, fetchProperties }) => {
                   <CrmActionLink
                     actionType="PREVIEW_OBJECT"
                     actionContext={{
-                      objectTypeId: "2-19860301",
+                      objectTypeId: "2-45804803",
                       objectId: location.id
                     }}
                     variant="secondary"
@@ -163,6 +165,9 @@ const Extension = ({ context, runServerless, sendAlert, fetchProperties }) => {
           })}
         </TableBody>
       </Table>
+
+      <Divider />
+
     </>
   );
 };
