@@ -42,7 +42,7 @@ hubspot.extend(({ context, runServerlessFunction, actions }) => (
   />
 ));
 
-const Extension = ({ context, runServerless, sendAlert, fetchProperties }) => {
+const Extension = ({ context, runServerless, sendAlert, fetchProperties, actions }) => {
 
   const [locations, setLocations] = useState([]);
   const [locationsOnPage, setLocationsOnPage] = useState([]);
@@ -165,7 +165,7 @@ const Extension = ({ context, runServerless, sendAlert, fetchProperties }) => {
             size="md"
             type="button"
           >
-            Search!
+            Search
           </Button>
         </Flex>
         <Divider />
@@ -282,12 +282,6 @@ const Extension = ({ context, runServerless, sendAlert, fetchProperties }) => {
                           )}
                         </ModalBody>
                         <ModalFooter>
-                          <Button
-                            variant="secondary"
-                            onClick={() => setIsModalOpen(false)}
-                          >
-                            Close
-                          </Button>
                           {rentalFormData.vehicleId && (
                             <Button
                               variant="primary"
