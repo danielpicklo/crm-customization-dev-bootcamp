@@ -2,6 +2,12 @@
   "appFunctions": {
     "getLocations": {
       "file": "getLocations.js"
+    },
+    "getVehiclesForLocation": {
+      "file": "getVehiclesForLocation.js"
+    },
+    "createRentalAgreement": {
+      "file": "createRentalAgreement.js"
     }
   }
 }
